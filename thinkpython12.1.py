@@ -1,8 +1,9 @@
 #Rather than counting numbers and sorting them after I decide to sort them as they came in to keep algorthimic complexity down
 #I realized this was not very practical after starting, but it was good practice
-#I believe my strategy keeps the algorithm complexity as O(n)
-#But since n is the number of characters that could be in the file, the quick sort complexity of O(nLogn) will never actually cause problems.
-#With my strategy runtime may be increased because of the number of computations multplied per character in string done while analyzing the file
+#I believe my strategy keeps the algorithm complexity as O(k), where k is the size of the input file
+#If had pursued a count then (quick) sort strategy, the complexity would have been k + nlogn with n being the number of unique characters in the file
+#Since n would never get bigger than 60 this would never actually cause practical difference over the O(k)
+#in this case, my strategy may actually end up increasing runtime because of the number of computations multplied per character in string done while analyzing the file
 #Two different maps
 #  1: for tracking how many of a character has been read, 
 #  2: maintaing a set of each character at each rank so we don't have to sort again later
